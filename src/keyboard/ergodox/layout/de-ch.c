@@ -91,7 +91,7 @@ KB_MATRIX_LAYER(
 	_guiL,	_ch_lessThan,	0,	0,	0,	
 	_ctrlL,	_altL,	
 	0,	0,	_home,	
-	_space,	_bs,	_end,	
+	_bs,	_del,	_end,	
 	// right hand
 	_ch_question,	_6,	_7,	_8,	_9,		_0,	_ch_caret,	
 	_ch_ue,			_Y,	_U,	_I,	_O,		_P,	_ch_exclamation,	
