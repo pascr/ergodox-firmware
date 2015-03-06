@@ -65,10 +65,10 @@ void kbfun_layer_pop_all(void) {
 #define _ch_question	KEY_Dash_Underscore
 #define _ch_caret		KEY_Equal_Plus
 #define _ch_lessThan	KEY_NonUS_Backslash_Pipe
-#define _ch_ue 			KEY_LeftBracket_LeftBrace
+#define _ch_ue			KEY_LeftBracket_LeftBrace
 #define _ch_exclamation	KEY_RightBracket_RightBrace
-#define _ch_oe
-#define _ch_ae 			KEY_SingleQuote_DoubleQuote
+#define _ch_oe			KEY_Semicolon_Colon
+#define _ch_ae			KEY_SingleQuote_DoubleQuote
 #define _ch_dollar		KEY_NonUS_Pound_Tilde
 #define _ch_comma		KEY_Comma_LessThan
 #define _ch_period		KEY_Period_GreaterThan
@@ -84,18 +84,18 @@ KB_MATRIX_LAYER(
 	// unused
 	0,	
 	// left hand
-	_ch_degree,	_1,	_2,	_3,	_4,	_5,	_6,	
+	_ch_degree,	_1,	_2,	_3,	_4,	_5,	_esc,	
 	_tab,		_Q,	_W,	_E,	_R,	_T,	2,	
-	0,			_A,	_S,	_D,	_F,	_G,	
+	2,			_A,	_S,	_D,	_F,	_G,	
 	_shiftL,	_Z,	_X,	_C,	_V,	_B,	1,	
-	_guiL,	_ch_lessThan,	0,	0,	0,	
+	_guiL,	_ch_lessThan,	_ch_caret,	_ch_exclamation,	_ch_dollar,	
 	_ctrlL,	_altL,	
 	0,	0,	_home,	
 	_bs,	_del,	_end,	
 	// right hand
-	_ch_question,	_6,	_7,	_8,	_9,		_0,	_ch_caret,	
-	_ch_ue,			_Y,	_U,	_I,	_O,		_P,	_ch_exclamation,	
-	_H,				_J,	_K,	_L,	_ch_ae,	_ch_dollar,	
+	_esc,	_6,	_7,	_8,	_9,	_0,	_ch_question,	
+	2,		_Y,	_U,	_I,	_O,	_P,	_ch_ue,	
+			_H,	_J,	_K,	_L,	_ch_oe,	_ch_ae,	
 	1,	_N,	_M,	_ch_comma,	_ch_period,	_ch_dash,	_shiftR,	
 	_arrowL,	_arrowD,	_arrowU,	_arrowR,	_guiR,	
 	_altR,	_ctrlR,	
@@ -107,19 +107,19 @@ KB_MATRIX_LAYER(
 	// unused
 	0,	
 	// left hand
-	0,	_F1,	_F2,	_F3,	_F4,	_F5,	_F11,	
-	0,	_F6,	_F7,	_F8,	_F9,	_F10,	_F12,	
-	0,	0,	0,	0,	0,	0,	
 	0,	0,	0,	0,	0,	0,	0,	
+	0,	0,	0,	0,	0,	0,	2,	
+	2,	0,	0,	0,	0,	0,	
+	0,	0,	0,	0,	0,	0,	1,	
 	0,	0,	0,	0,	0,	
 	0,	0,	
 	0,	0,	0,	
 	0,	0,	0,	
 	// right hand
-	_F12,	_F6,	_F7,	_F8,	_F9,	_F10,	0,	
-	_F11,	_F1,	_F2,	_F3,	_F4,	_F5,	0,	
-	0,	0,	0,	0,	0,	0,	
-	0,	0,	0,	0,	0,	0,	0,	
+	0,	0,	_ch_ue,	_ch_exclamation,	0,	0,	0,	
+	0,	0,	_ch_ae,	_ch_dollar,	0,	0,	0,	
+	0,	_8,	_9,	0,	0,	0,	
+	0,	0,	_ch_lessThan,	_ch_lessThan,	0,	0,	0,	
 	0,	0,	0,	0,	0,	
 	0,	0,	
 	0,	0,	0,	
@@ -130,19 +130,19 @@ KB_MATRIX_LAYER(
 	// unused
 	0,	
 	// left hand
-	0,	0,	0,	0,	0,	0,	0,	
-	0,	0,	0,	0,	0,	0,	0,	
-	0,	0,	0,	0,	0,	0,	
-	0,	0,	0,	0,	0,	0,	0,	
+	0,	_F1,	_F2,	_F3,	_F4,	_F5,	_F11,	
+	0,	_F6,	_F7,	_F8,	_F9,	_F10,	2,	
+	2,	_F11,	_F12,	0,	0,	0,	
+	0,	0,	0,	0,	0,	0,	1,	
 	0,	0,	0,	0,	0,	
 	0,	0,	
 	0,	0,	0,	
 	0,	0,	0,	
 	// right hand
-	0,	0,	_8,				_9,					0,	0,	0,	
-	0,	0,	_ch_ue,			_ch_exclamation,	0,	0,	0,	
-	0,		_ch_ae,			_ch_dollar,			0,	0,	0,	
-	0,	0,	_ch_lessThan,	_ch_lessThan,		0,	0,	0,	
+	_F12,	_F6,	_F7,	_F8,	_F9,	_F10,	0,	
+	0,	0,	0,	0,	0,	0,	0,	
+	0,	0,	0,	0,	0,	0,	
+	0,	0,	0,	0,	0,	0,	0,	
 	0,	0,	0,	0,	0,	
 	0,	0,	
 	0,	0,	0,	
@@ -321,15 +321,15 @@ KB_MATRIX_LAYER(
 	// left hand
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpush2,	
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	lpush2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpush1,	
-	kprrel,	kprrel,	NULL,	NULL,	NULL,	
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	
 	NULL,	NULL,	kprrel,	
 	kprrel,	kprrel,	kprrel,	
 	// right hand
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	lpush2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	lpush1,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
@@ -342,21 +342,21 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,	
 	// left hand
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpush2,	
+	lpush2,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpush1,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	ktrans,	
+	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	// right hand
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	ktrans,	
+	NULL,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
+	lpush2,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
+	NULL,	sshprre,	sshprre,	NULL,	NULL,	NULL,	
+	lpush1,	NULL,	kprrel,	sshprre,	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	ktrans,	
+	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL	
 ),
@@ -365,21 +365,21 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,	
 	// left hand
-	dbtldr,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	dbtldr,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	ktrans,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpush2,	
+	lpop2,	kprrel,	kprrel,	NULL,	NULL,	NULL,	
+	ktrans,	NULL,	NULL,	NULL,	NULL,	NULL,	lpush1,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	
+	ktrans,	ktrans,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	// right hand
-	NULL,	NULL,	sshprre,	sshprre,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
-	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	kprrel,		sshprre,	NULL,	NULL,	NULL,	
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
+	lpush2,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	lpush1,	NULL,	NULL,	NULL,	NULL,	NULL,	ktrans,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	
+	ktrans,	ktrans,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL	
 ),
@@ -558,13 +558,13 @@ KB_MATRIX_LAYER(
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpop2,	
 	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpop1,	
-	kprrel,	kprrel,	NULL,	NULL,	NULL,	
+	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	
 	NULL,	NULL,	kprrel,	
 	kprrel,	kprrel,	kprrel,	
 	// right hand
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	lpop2,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	lpop1,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
 	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
@@ -577,21 +577,21 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,	
 	// left hand
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
-	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpop2,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpop1,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	ktrans,	
+	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	// right hand
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	ktrans,	
+	NULL,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
+	lpop2,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
+	NULL,	sshprre,	sshprre,	NULL,	NULL,	NULL,	
+	lpop1,	NULL,	kprrel,	sshprre,	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
-	ktrans,	ktrans,	
+	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL	
 ),
@@ -600,19 +600,19 @@ KB_MATRIX_LAYER(
 	// unused
 	NULL,	
 	// left hand
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	
+	NULL,	kprrel,	kprrel,	kprrel,	kprrel,	kprrel,	lpop2,	
+	NULL,	kprrel,	kprrel,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	lpop1,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
 	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
 	// right hand
-	NULL,	NULL,	sshprre,	sshprre,	NULL,	NULL,	NULL,	
-	NULL,	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,	
-	NULL,	agrprre,	agrprre,	NULL,	NULL,	NULL,
-	NULL,	NULL,	kprrel,		sshprre,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	lpop2,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
+	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,
+	lpop1,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	
 	NULL,	NULL,	NULL,	NULL,	NULL,	
 	NULL,	NULL,	
 	NULL,	NULL,	NULL,	
